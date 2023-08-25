@@ -6,6 +6,10 @@ serve:
 
 # Targets below are used by GitHub actions!
 
+.PHONY: build-dev
+build-dev:
+	docker-compose build
+
 .PHONY: lint
 lint:
 	${DOCKER_RUN} "flake8"
